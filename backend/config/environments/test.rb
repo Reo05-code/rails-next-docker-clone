@@ -29,6 +29,10 @@ Rails.application.configure do
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
 
+  # Disable host authorization in test environment
+  config.action_dispatch.hosts_response_app = nil
+  config.hosts.clear
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 

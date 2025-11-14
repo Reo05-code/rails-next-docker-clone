@@ -7,11 +7,19 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ENV.fetch("FRONTEND_URL") { "http://localhost:3000" }
-
-    resource "*",
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head],
-      credentials: true
+    # Allow any origin in test/development, specific origin in production
+    if Rails.env.test? || Rails.env.development?
+      origins '*'
+      resource "*",
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: false
+    else
+      origins ENV.fetch("FRONTEND_URL") { "http://localhost:3000" }
+      resource "*",
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
   end
 end

@@ -22,12 +22,12 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # Debugging
-  gem "debug", platforms: %i[ mri windows ]
+  gem "debug", platforms: %i[mri windows]
 
   # Testing
-  gem "rspec-rails", "~> 6.1"
   gem "factory_bot_rails", "~> 6.4"
   gem "faker", "~> 3.2"
+  gem "rspec-rails", "~> 6.1"
 
   # Linting
   gem "rubocop", "~> 1.59", require: false
@@ -42,7 +42,7 @@ group :development do
 end
 
 group :test do
-  gem "shoulda-matchers", "~> 6.0"
   gem "database_cleaner-active_record", "~> 2.1"
+  gem "shoulda-matchers", "~> 6.0"
   gem "simplecov", require: false
 end
