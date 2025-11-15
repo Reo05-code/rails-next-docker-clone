@@ -26,6 +26,9 @@ gem "webrick", ">= 1.8.2"
 # Security: Fix Thor vulnerability
 gem "thor", ">= 1.4.0"
 
+# Security: Fix REXML ReDoS vulnerability
+gem "rexml", ">= 3.3.9"
+
 group :development, :test do
   # Debugging
   gem "debug", platforms: %i[mri windows]
