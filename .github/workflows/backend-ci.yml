@@ -149,8 +149,8 @@ jobs:
           echo "Security: ${{ needs.security.result }}"
 
           if [ "${{ needs.test.result }}" != "success" ] || \
-             [ "${{ needs.lint.result }}" != "success" ] || \
-             [ "${{ needs.security.result }}" != "success" ]; then
+            [ "${{ needs.lint.result }}" != "success" ] || \
+            [ "${{ needs.security.result }}" != "success" ]; then
             echo "❌ CI failed"
             exit 1
           else
