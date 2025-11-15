@@ -63,7 +63,7 @@ jobs:
         run: cp .env.example .env
 
       - name: Build and start services
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
 
       - name: Wait for services
         run: |
@@ -89,15 +89,15 @@ jobs:
         if: failure()
         run: |
           echo "=== Backend logs ==="
-          docker-compose logs backend
+          docker compose logs backend
           echo "=== Frontend logs ==="
-          docker-compose logs frontend
+          docker compose logs frontend
           echo "=== Database logs ==="
-          docker-compose logs db
+          docker compose logs db
 
       - name: Cleanup
         if: always()
-        run: docker-compose down -v
+        run: docker compose down -v
 
   summary:
     name: CI Summary
