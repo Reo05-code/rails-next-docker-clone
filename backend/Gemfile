@@ -20,6 +20,9 @@ gem "rack-cors"
 # Reduces boot times through caching
 gem "bootsnap", require: false
 
+# Security: Fix WEBrick vulnerability (CVE-2024-47220)
+gem "webrick", ">= 1.8.2"
+
 group :development, :test do
   # Debugging
   gem "debug", platforms: %i[mri windows]
