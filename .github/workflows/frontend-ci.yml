@@ -1,7 +1,7 @@
 name: Frontend CI
 
 on:
-  workflow_call:  # 他のワークフローから呼び出し可能にする
+  # workflow_call:  # 他のワークフローから呼び出し可能にする
   push:
     branches: [ main, develop ]
     paths:
