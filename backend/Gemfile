@@ -23,6 +23,9 @@ gem "bootsnap", require: false
 # Security: Fix WEBrick vulnerability (CVE-2024-47220)
 gem "webrick", ">= 1.8.2"
 
+# Security: Fix Thor vulnerability
+gem "thor", ">= 1.4.0"
+
 group :development, :test do
   # Debugging
   gem "debug", platforms: %i[mri windows]
