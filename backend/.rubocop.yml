@@ -58,3 +58,6 @@ RSpec/MultipleExpectations:
 
 RSpec/NestedGroups:
   Max: 5
+
+Capybara/RSpec/PredicateMatcher:
+  Enabled: false
