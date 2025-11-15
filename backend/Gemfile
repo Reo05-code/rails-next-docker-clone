@@ -8,14 +8,8 @@ gem "rails", "~> 7.1.0"
 # Database
 gem "pg", "~> 1.5"
 
-# Application server
-gem "puma", ">= 5.0"
-
 # JSON
 gem "jbuilder"
-
-# CORS
-gem "rack-cors"
 
 # Reduces boot times through caching
 gem "bootsnap", require: false
@@ -28,6 +22,15 @@ gem "thor", ">= 1.4.0"
 
 # Security: Fix REXML ReDoS vulnerability
 gem "rexml", ">= 3.3.9"
+
+# Security: Fix indirect dependency vulnerabilities
+gem "nokogiri", ">= 1.18.9"
+gem "rack", ">= 3.2.3"
+gem "rack-cors", ">= 2.0.2"
+gem "rack-session", ">= 2.1.1"
+gem "rails-html-sanitizer", ">= 1.6.1"
+gem "puma", ">= 6.4.3"
+gem "net-imap", ">= 0.5.7"
 
 group :development, :test do
   # Debugging
@@ -48,6 +51,9 @@ group :development do
   # Code reloading
   gem "spring"
   gem "spring-commands-rspec"
+
+  # Security auditing
+  gem "bundler-audit", require: false
 end
 
 group :test do

@@ -123,11 +123,17 @@ jobs:
           sudo apt-get install -y libyaml-dev
           bundle install --jobs 4 --retry 3
 
-      - name: Run Bundler Audit
+      - name: Run Bundler Audit (Direct Dependencies)
         working-directory: backend
         run: |
-          gem install bundler-audit
-          bundler-audit check --update
+          bundle exec bundler-audit check --update
+
+      - name: Check Indirect Dependencies (Warning Only)
+        working-directory: backend
+        continue-on-error: true
+        run: |
+          echo "⚠️  Checking for vulnerabilities in all dependencies (including indirect):"
+          bundle exec bundler-audit check --update --verbose || echo "⚠️  Some indirect dependencies have known vulnerabilities. Consider updating them in Gemfile."
 
   summary:
     name: CI Summary
