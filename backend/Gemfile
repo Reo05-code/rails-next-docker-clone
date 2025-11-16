@@ -3,9 +3,8 @@ source "https://rubygems.org"
 ruby "3.2.9"
 
 # Rails
+gem "cgi", "~> 0.4.0" # Pin to 0.4.x for compatibility with globalid
 gem "rails", "~> 7.1.0"
-gem "globalid", "~> 1.2.0"
-gem "cgi", ">= 0.3.6"
 
 # Database
 gem "pg", "~> 1.5"

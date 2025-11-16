@@ -2,8 +2,11 @@
 
 Rails (API) + Next.js (Frontend) の Docker 開発環境です。
 
+# 現在
 [![Backend CI](https://github.com/Reo05-code/rails-next-docker-clone/workflows/Backend%20CI/badge.svg)](https://github.com/Reo05-code/rails-next-docker-clone/actions)
-[![Frontend CI](https://github.com/Reo05-code/rails-next-docker-clone/workflows/Frontend%20CI/badge.svg)](https://github.com/Reo05-code/rails-next-docker-clone/actions)
+
+# 修正例（テンプレート用）
+[![Backend CI](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/workflows/Backend%20CI/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions)
 
 
 ## 技術スタック
