@@ -20,6 +20,10 @@ RUN bundle install
 # アプリケーションコードをコピー
 COPY . .
 
+# ログディレクトリとtmpディレクトリの権限を設定
+RUN mkdir -p log tmp/pids tmp/cache tmp/sockets && \
+    chmod -R 777 log tmp
+
 EXPOSE 3001
 
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3001"]

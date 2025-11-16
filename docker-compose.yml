@@ -36,8 +36,6 @@ services:
         condition: service_healthy
     stdin_open: true
     tty: true
-    # id -u, id -gで確認する
-    user: "1000:1000"
 
   frontend:
     build:
@@ -57,8 +55,6 @@ services:
       - backend
     stdin_open: true
     tty: true
-    # id -u, id -gで確認する
-    user: "1000:1000"
 
 volumes:
   postgres_data:
