@@ -4,7 +4,7 @@ ruby "3.2.9"
 
 # Rails
 gem "cgi", "~> 0.4.0" # Pin to 0.4.x for compatibility with globalid
-gem "rails", "~> 7.1.0"
+gem "rails", "~> 7.2.0"
 
 # Database
 gem "pg", "~> 1.5"
