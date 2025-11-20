@@ -49,11 +49,11 @@ jobs:
       - name: Setup Database
         working-directory: backend
         run: |
-          bundle exec rails db:create
-          bundle exec rails db:migrate
+          bundle exec rails db:prepare
 
+    #bundle exec rails db:create
     # bundle exec rails db:schema:load
-    #開発する時はmigrateではなくこっちを使う
+    #開発する時はprepareではなくこっちを使う
 
       # --- ここから静的解析 (速い) ---
 
